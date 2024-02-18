@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <center ><h2 style = "margin-top:100px;">Details of Registration</h2></center>
+        <button class="ab"><a href="{% url 'create' %}">Add</a></button>
+<button class="lg"><a href="{% url 'login' %}">Logout</a></button>
+<table border="1px" style ="border-collapse: collapse; margin-left: 200px ;margin-top: 20px;height :200px;width:1000px">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Age</th>
+            <th> Email</th>
+            <th> Mobile </th>
+            <th> Qualification</th>
+            <th> CGPA</th>
+            <th> Objective</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in read %}
+          <tr>
+            <td> <center>{{ item.name }}</center></td>
+            <td> <center>{{ item.age }}</center></td>
+            <td> <center>{{ item.email }}</center></td>
+            <td> <center>{{ item.mobile }}</center></td>
+            <td> <center>{{ item.qualification }}</center></td>
+            <td> <center>{{ item.cgpa }}</center></td>
+            <td> <center>{{ item.objective }}</center></td>
+            <td><button class="btn2"><a class="edit" href="{% url 'update' item.id %}">Edit </a> </button></td>
+            <td><button class="btn2"><a class="edit" href="{% url 'delete' item.id %}">Delete </a> </button></td>
+          </tr>
+        {% endfor %}
+    </tbody>
+ </table>
+</body>
+ </html>

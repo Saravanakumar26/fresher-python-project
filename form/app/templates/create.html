@@ -1,0 +1,55 @@
+<div class ="container" style="margin-top :80px;padding:20px;background-color: paleturquoise;width:500px;margin-left: 500px;margin-top:100px;">
+    <div class = "row">
+        <div class = "col-12">
+            <h4 class="mb-3"> New User Registration</h4>
+            <hr style="border-color:#b8bfc2;">
+        
+        </div>
+        </div>
+        <section class="py-4 my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <form method="POST" name="create" enctype="multipart/form-data">
+                            {% csrf_token %}
+            
+                        <div >
+                            <label form="" class="form-label" style="margin-top: 20px;">Name</label><br>
+                            <div style="margin-top: 10px;">{{form.name}}</div>
+                           
+                        </div>
+                        <div style = "margin-top:20px;">
+                            <label form="" class="form-label">Age</label>
+                            <div style="margin-top: 10px;">{{form.age}}</div>
+                        </div>
+                        <div style = "margin-top:20px;">
+                            <label form="" class="form-label">Email</label>
+                            <div style="margin-top: 10px;"> {{form.email}}</div>
+                        </div>
+                        <div style = "margin-top:20px;">
+                            <label form="" class="form-label">Mobile </label>
+                            <div style="margin-top: 10px;"> {{form.mobile}}</div>
+                        </div>
+                        <div style = "margin-top:20px;">
+                            <label form="" class="form-label">Qualification </label>
+                            <div style="margin-top: 10px;"> {{form.qualification}}</div>
+                        </div>
+                        <div style = "margin-top:20px;">
+                             <label form="" class="form-label">CGPA</label>
+                             <div style="margin-top: 10px;"> {{form.cgpa}}</div>
+                        </div>    
+                        <div style = "margin-top:20px;">
+                             <label form="" class="form-label">Objective</label>
+                             <div style="margin-top: 10px;"> {{form.objective}}</div>
+                        </div>
+                        </div >
+                        <button type="submit" class="btn btn-primary" style = "margin-top:20px;margin-left:200px;">Register</button>
+                        </form>
+                     
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
+
